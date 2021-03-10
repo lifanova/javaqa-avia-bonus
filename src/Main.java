@@ -1,10 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        long price = 1000;
-        int temp = 20;
+        double price = 15400.32;
 
-        long miles = price / temp;
+        long miles = calculateMiles(price);
 
         System.out.printf("За билет стоимостью %s рублей начислено %d миль", price, miles);
+    }
+
+    public static long calculateMiles(double price){
+        int miles = 20;
+
+        long resultMiles = (long)(price / miles);
+
+        return resultMiles;
     }
 }
